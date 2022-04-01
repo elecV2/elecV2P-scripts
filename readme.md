@@ -8,7 +8,7 @@
 
 ``` JSON
 {
-  "name": "name.js",
+  "name": "脚本名称",
   "logo": "url/to/logo_180x180.png",
   "note": "一些备注，关于脚本的说明",
   "tags": ["elecV2P", "标签"],
@@ -16,7 +16,7 @@
   "homepage": "url/to/author",
   "resource": "url/to/file.js",
   "thumbnail": ["url/to/thum1.jpg", "url/to/thum2.jpg"],
-  "sponsor_img": "url/to/qr.png",
+  "sponsor_img": "url/to/donation_qr.png",
   "sponsor_txt": "捐赠支持说明/或其他账号信息",
   "content_hash": "auto content md5 hash",
 }
@@ -30,21 +30,68 @@
 - sponsor_img/sponsor_txt 填一个就好。建议都填
 - 脚本 hash。自动生成（待完成
 
-主入口：main.json
+#### 最小单元
 
 ``` JSON
 {
-  "category": [
-    "url1/to/category.json",
-    "url2/to/category.json",
-    "url3/to/category.json",
-  ]
+  "name": "清空日志",
+  "resource": "https://raw.githubusercontent.com/elecV2/elecV2P/master/script/JSFile/deletelog.js",
+  "sponsor_img": "https://elecv2.github.io/src/wechat.png",
 }
 ```
 
-分类脚本列表：category_name.json
+- sponsor_img 也可不填。如不填，可能无法进行打赏
+
+推荐提交结构
 
 ``` JSON
+{
+  "name": "清空日志",
+  "logo": "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/res/dlog.png",
+  "note": "清空 elecV2P 脚本运行产生的日志",
+  "tags": ["elecV2P", "工具"],
+  "author": "elecV2",
+  "homepage": "https://github.com/elecV2/elecV2P",
+  "resource": "https://raw.githubusercontent.com/elecV2/elecV2P/master/script/JSFile/deletelog.js",
+  "sponsor_img": "https://elecv2.github.io/src/wechat.png",
+  "sponsor_txt": "如果觉得该脚本还不错的话，请作者喝杯饮料",
+}
+```
+
+### 脚本分类
+
+- 日常签到 checkin
+- 工具应用 tools
+- 休闲娱乐 relax
+
+### 主入口 main.json
+
+``` JSON
+{
+  "checkin": {
+    "name": "日常签到",
+    "list": [
+      "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/checkin_01.json",
+    ]
+  },
+  "tools": {
+    "name": "工具应用",
+    "list": [
+      "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/tools_01.json",
+    ]
+  },
+  "relax": {
+    "name": "休闲娱乐",
+    "list": [
+      "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/relax_01.json"
+    ]
+  }
+}
+```
+
+### 分类脚本 category_name.json
+
+``` JSON  checkin_01.json
 {
   "name": "分类名称",
   "note": "分类说明",
@@ -54,13 +101,8 @@
 }
 ```
 
-### 具体类别
-
-- 日常签到
-- 工具应用
-
 ### 待解决问题
 
-- [ ] 具体如何分类
 - [ ] 脚本快速查找
+- [x] 具体如何分类
 - [x] contex_hash 及 date 自动生成(git commit)
