@@ -1,0 +1,17 @@
+{
+  "name": "默认工具",
+  "note": "elecV2P 默认工具",
+  "list": [
+    {
+      "name": "清空日志",
+      "logo": "url/to/logo_180x180.png",
+      "note": "清空 elecV2P 脚本运行产生的日志",
+      "tags": ["elecV2P", "工具"],
+      "author": "elecV2",
+      "homepage": "https://github.com/elecV2/elecV2P",
+      "resource": "https://raw.githubusercontent.com/elecV2/elecV2P/master/script/JSFile/deletelog.js",
+      "sponsor_img": "https://elecv2.github.io/src/wechat.png",
+      "sponsor_txt": "赞助打赏",
+    }
+  ]
+}
