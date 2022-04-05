@@ -1,17 +1,35 @@
 {
   "name": "默认工具",
   "note": "elecV2P 默认工具",
-  "list": [
-    {
-      "name": "清空日志",
-      "logo": "url/to/logo_180x180.png",
-      "note": "清空 elecV2P 脚本运行产生的日志",
-      "tags": ["elecV2P", "工具"],
-      "author": "elecV2",
-      "homepage": "https://github.com/elecV2/elecV2P",
-      "resource": "https://raw.githubusercontent.com/elecV2/elecV2P/master/script/JSFile/deletelog.js",
-      "sponsor_img": "https://elecv2.github.io/src/wechat.png",
-      "sponsor_txt": "赞助打赏",
-    }
-  ]
+  "list": [{
+    "name": "清空日志",
+    "logo": "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/res/dlog.png",
+    "note": "清空 elecV2P 脚本运行产生的日志",
+    "tags": ["elecV2P", "工具", "日志"],
+    "author": "elecV2",
+    "homepage": "https://github.com/elecV2/elecV2P",
+    "resource": "https://raw.githubusercontent.com/elecV2/elecV2P/master/script/JSFile/deletelog.js",
+    "sponsor_img": "https://elecv2.github.io/src/wechat.png",
+    "sponsor_txt": "赞助打赏",
+  }, {
+    "name": "软更新升级",
+    "logo": "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/res/soft_update.png",
+    "note": "elecV2P 软更新升级",
+    "tags": ["elecV2P", "工具", "更新"],
+    "author": "elecV2",
+    "homepage": "https://github.com/elecV2/elecV2P",
+    "resource": "https://raw.githubusercontent.com/elecV2/elecV2P/master/script/JSFile/softupdate.js",
+    "sponsor_img": "https://elecv2.github.io/src/wechat.png",
+    "sponsor_txt": "赞助打赏",
+  }, {
+    "name": "Python 安装",
+    "logo": "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/res/py_install.png",
+    "note": "elecV2P 下安装 python",
+    "tags": ["elecV2P", "工具", "python"],
+    "author": "elecV2",
+    "homepage": "https://github.com/elecV2/elecV2P",
+    "resource": "https://raw.githubusercontent.com/elecV2/elecV2P/master/script/JSFile/python-install.js",
+    "sponsor_img": "https://elecv2.github.io/src/wechat.png",
+    "sponsor_txt": "赞助打赏",
+  }]
 }
