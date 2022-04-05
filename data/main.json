@@ -1,10 +1,4 @@
 {
-  "checkin": {
-    "name": "日常签到",
-    "list": [
-      "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/checkin_01.json",
-    ]
-  },
   "tools": {
     "name": "工具应用",
     "list": [
@@ -16,5 +10,11 @@
     "list": [
       "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/relax_01.json"
     ]
-  }
+  },
+  "routine": {
+    "name": "日常打卡",
+    "list": [
+      "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/routine_01.json",
+    ]
+  },
 }

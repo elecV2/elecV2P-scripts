@@ -60,20 +60,14 @@
 
 ### 脚本分类
 
-- 日常签到 checkin
 - 工具应用 tools
 - 休闲娱乐 relax
+- 日常签到 routine
 
 ### 主入口 main.json
 
 ``` JSON
 {
-  "checkin": {
-    "name": "日常签到",
-    "list": [
-      "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/checkin_01.json",
-    ]
-  },
   "tools": {
     "name": "工具应用",
     "list": [
@@ -85,24 +79,31 @@
     "list": [
       "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/relax_01.json"
     ]
-  }
+  },
+  "routine": {
+    "name": "日常打卡",
+    "list": [
+      "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/routine_01.json",
+    ]
+  },
 }
 ```
 
 ### 分类脚本 category_name.json
 
-``` JSON  checkin_01.json
+``` JSON  category_name_01.json
 {
   "name": "分类名称",
   "note": "分类说明",
-  "scripts": [
+  "list": [
     "script_obj1", "script_obj2", "script_obj3"
   ]
 }
 ```
 
-### 待解决问题
+### TODO
 
 - [ ] 脚本快速查找
+- [ ] logo 自动生成
+- [ ] contex_hash 自动生成
 - [x] 具体如何分类
-- [x] contex_hash 及 date 自动生成(git commit)
