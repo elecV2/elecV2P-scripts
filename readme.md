@@ -1,6 +1,49 @@
 ### elecV2P 脚本/应用
 
-一些适用于 [elecV2P](https://github.com/elecV2/elecV2P) 的脚本。
+[elecV2P](https://github.com/elecV2/elecV2P) 脚本库。收集一些适用于 elecV2P 的脚本，方便用户进行查找。
+
+### 脚本分类
+
+- 工具应用 tools
+- 休闲娱乐 relax
+- 日常打卡 routine
+
+### 主入口 data/main.json
+
+``` JSON
+{
+  "tools": {
+    "name": "工具应用",
+    "list": [
+      "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/tools_01.json",
+    ]
+  },
+  "relax": {
+    "name": "休闲娱乐",
+    "list": [
+      "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/relax_01.json"
+    ]
+  },
+  "routine": {
+    "name": "日常打卡",
+    "list": [
+      "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/routine_01.json",
+    ]
+  },
+}
+```
+
+### 分类脚本 data/category_name.json
+
+``` JSON  category_name_01.json
+{
+  "name": "分类名称",
+  "note": "分类说明",
+  "list": [
+    "script_obj1", "script_obj2", "script_obj3"
+  ]
+}
+```
 
 ### 格式结构
 
@@ -30,7 +73,7 @@
 - sponsor_img/sponsor_txt 填一个就好。建议都填
 - 脚本 hash。自动生成（待完成
 
-#### 最小单元
+#### 最小结构
 
 ``` JSON
 {
@@ -40,7 +83,7 @@
 }
 ```
 
-- sponsor_img 也可不填。如不填，可能无法进行打赏
+- sponsor_img 为接受打赏的二维码，也可不填
 
 推荐提交结构
 
@@ -58,52 +101,31 @@
 }
 ```
 
-### 脚本分类
+### 脚本提交流程
 
-- 工具应用 tools
-- 休闲娱乐 relax
-- 日常签到 routine
+1. 首先在 https://github.com/elecV2/elecV2P 点击 Fork
+2. 然后拉取 Fork 后的仓库到本地
+  - git clone https://github.com/{{owner}}/elecV2P
+3. 然后在本地添加要提交的脚本
+  - 确定脚本分类，在 **data** 目录下找到对应的 json 文件
+  - 按照脚本提交结构在 list 中添加相应内容
+4. 检查提交内容
+  - git status
+  - git diff -z
+5. 确认无误后，进行正式 PR 提交
+  - 首先将修改后的内容 git push 到自己的仓库
+  - 然后在仓库页面点击 Compare & pull request 进行正式提交
 
-### 主入口 main.json
+注意事项：
 
-``` JSON
-{
-  "tools": {
-    "name": "工具应用",
-    "list": [
-      "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/tools_01.json",
-    ]
-  },
-  "relax": {
-    "name": "休闲娱乐",
-    "list": [
-      "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/relax_01.json"
-    ]
-  },
-  "routine": {
-    "name": "日常打卡",
-    "list": [
-      "https://raw.githubusercontent.com/elecV2/elecV2P-scripts/main/data/routine_01.json",
-    ]
-  },
-}
-```
-
-### 分类脚本 category_name.json
-
-``` JSON  category_name_01.json
-{
-  "name": "分类名称",
-  "note": "分类说明",
-  "list": [
-    "script_obj1", "script_obj2", "script_obj3"
-  ]
-}
-```
+- 尽量一次只提交一个脚本，如有多少脚本请分开提交
+- 如果对 PR 流程不熟悉，搜索 **github PR 流程**。多尝试几次就熟了
+- **请放心大胆地提交 PR，反正要简单审核才能通过，不用担心对仓库有什么影响**
 
 ### TODO
 
 - [ ] 脚本快速查找
 - [ ] logo 自动生成
 - [ ] contex_hash 自动生成
+- [ ] script_store.efh 应用中心
 - [x] 具体如何分类
