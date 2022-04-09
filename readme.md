@@ -103,16 +103,16 @@
 
 ### 脚本提交流程
 
-1. 首先在 https://github.com/elecV2/elecV2P 点击 Fork
-2. 然后拉取 Fork 后的仓库到本地
+1. 在 https://github.com/elecV2/elecV2P 点击 Fork
+2. 拉取 Fork 后的仓库到本地
   - git clone https://github.com/{{owner}}/elecV2P
-3. 然后在本地添加要提交的脚本
-  - 确定脚本分类，在 **data** 目录下找到对应的 json 文件
+3. 在本地添加要提交的脚本
+  - 确定脚本分类，在 **data** 目录下找到对应的分类 json 文件
   - 按照脚本提交结构在 list 中添加相应内容
 4. 检查提交内容
   - git status
   - git diff -z
-5. 确认无误后，进行正式 PR 提交
+5. 确认无误后，正式 PR 提交
   - 首先将修改后的内容 git push 到自己的仓库
   - 然后在仓库页面点击 Compare & pull request 进行正式提交
 
@@ -121,6 +121,13 @@
 - 尽量一次只提交一个脚本，如有多少脚本请分开提交
 - 如果对 PR 流程不熟悉，搜索 **github PR 流程**。多尝试几次就熟了
 - **请放心大胆地提交 PR，反正要简单审核才能通过，不用担心对仓库有什么影响**
+
+### 脚本要求
+
+- 不可加密
+- 长期可用（至少一个月内有效，特殊情况下可放宽此限制）
+- 非 VIP 破解类
+- 脚本内注明：兼容 elecV2P
 
 ### TODO
 
